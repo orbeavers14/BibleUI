@@ -19,15 +19,24 @@ let package = Package(
             targets: ["BibleUI"]
         ),
     ],
+    dependencies: [
+        .package(url: "https://github.com/orbeavers14/BibleKit.git", from: "0.1.0"),
+    ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "BibleUI"
+            name: "BibleUI",
+            dependencies: [
+                .product(name: "BibleKit", package: "BibleKit"),
+            ]
         ),
         .testTarget(
             name: "BibleUITests",
-            dependencies: ["BibleUI"]
+            dependencies: [
+                "BibleUI",
+                .product(name: "BibleKit", package: "BibleKit"),
+            ]
         ),
     ],
     swiftLanguageModes: [.v6]

@@ -1,0 +1,15 @@
+{
+  "originHash" : "0e5f7d3339cbd251265effbaa2822e375eba644bd5b7e603b130083d2e9294af",
+  "pins" : [
+    {
+      "identity" : "biblekit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/orbeavers14/BibleKit.git",
+      "state" : {
+        "revision" : "5e5b8bcee5993a44799a93bb018d0bf001592bf7",
+        "version" : "0.1.0"
+      }
+    }
+  ],
+  "version" : 3
+}
